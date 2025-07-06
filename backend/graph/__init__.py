@@ -1,3 +1,3 @@
-from .workflow import HGWorkflow
+from .workflow import Workflow
 
-__all__ = ['HGWorkflow']
+__all__ = ['Workflow']

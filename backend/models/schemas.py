@@ -34,6 +34,8 @@ class ProcessingRequest(BaseModel):
     product_ids: Optional[List[str]] = None
     row_range: Optional[Dict[str, int]] = None  # {"start": 0, "end": 100}
     custom_prompt: Optional[str] = None
+    # Optional workflow graph coming from frontend (nodes + edges + configs)
+    workflow: Optional[Dict[str, Any]] = None
 
 class ProcessingResult(BaseModel):
     job_id: str

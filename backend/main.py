@@ -13,7 +13,7 @@ from models.schemas import (
     FileUploadResponse, ProcessingRequest, ProcessingResult,
     TaskType, ProcessingMode, LLMModel
 )
-from graph.workflow import HGWorkflow
+from graph.workflow import Workflow
 from utils.file_handler import FileHandler
 from agents.csv_loader_agent import CSVLoaderAgent
 
@@ -35,7 +35,7 @@ app.add_middleware(
 
 # Initialize components
 file_handler = FileHandler()
-workflow = HGWorkflow()
+workflow = Workflow()
 csv_loader = CSVLoaderAgent()
 
 # In-memory storage for demo (use Redis/Database in production)
